@@ -1,0 +1,39 @@
+{
+  "name": "edi-parser",
+  "version": "0.0.1",
+  "description": "EDI Parser",
+  "main": "index.js",
+  "repository": "git@github.com:intothelab/edi-parser.git",
+  "author": "Pedro Santiago <contato@pedrosantiago.com.br>",
+  "license": "PRIVATE",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "edipsy": "^1.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^10.14.16",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
+    "tslint": "^5.19.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly --no-notify ./src/app.ts",
+    "lint": "tslint \"src/**/*.ts\"",
+    "start": "npm run build && node ./dist/app.js",
+    "upgrade": "sh ./upgrade"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  }
+}
